@@ -1,0 +1,77 @@
+:root {
+    --snake: rgb(131, 216, 46);
+    --land: rgb(75, 107, 167);  /*chocolate*/
+    --food: crimson;
+    --header: rgb(82, 139, 24);
+    --start:  rgb(216, 42, 77);
+}
+
+
+* {
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-size: 35px;
+    background-color:var(--header);
+    height: 50px;
+    display: flex;
+    align-items: center; /*Verticalmente*/
+    justify-content: center; /*Horizontalmente*/
+}
+
+#board, .boardInfo, #start {
+    /* max-width: 1200px; */
+    font-size: 30px;
+}
+
+
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: auto;
+    max-width: 500px; 
+} 
+
+.boardInfo {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px auto;
+}
+
+#start {
+  background-color: var(--start);  
+  border: none;
+  color: white;
+
+}
+
+#gameOver {
+    display: none;
+}
+
+#scoreBoard {   
+    display: inline-flex;   /*Para que el puntaje se muestre al lado de Score*/
+}
+
+.square {
+    aspect-ratio: 1;    /*Para que c/u de los cuadrados del tablero sean cuadrados */
+}
+
+
+
+.emptySquare {
+    background-color: var(--land);
+}
+
+.snakeSquare {
+    background-color: var(--snake);
+}
+
+.foodSquare {
+    background-color:var(--food) ;
+}
+
